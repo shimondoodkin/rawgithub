@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shimon Doodkin",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/shimondoodkin/rawgithub"
