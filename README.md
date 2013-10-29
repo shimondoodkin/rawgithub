@@ -11,3 +11,11 @@ a node.js proxy to raw.github.com that adds mime, this is your own proxy because
 	
 if somebody wants to make it a tool to install with npm -g rawgithub -forks are welcome.
 	
+	
+usage:
+    
+	https://raw.github.com/shimondoodkin/rawgithub/master/index.js
+	to
+	http://localhost:6617/shimondoodkin/rawgithub/master/index.js
+	
+	notice the change from https to http
