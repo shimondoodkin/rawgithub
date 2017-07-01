@@ -3,11 +3,17 @@ var url = require('url');
 var mime = require('mime');
 var request = require('request');
 
+var remoteUrl = process.env.GIT_PROXY_DEST;
+if (remoteUrl === undefined) {
+    remoteUrl = 'https://raw.github.com';
+}
+
+
 http.createServer(function (req, res) {
-    console.log('http://raw.github.com'+req.url);
-	request('https://raw.github.com'+req.url, function (error, response, body) {
+    console.log(remoteUrl+req.url);
+	request(remoteUrl+req.url, function (error, response, body) {
 	  	res.writeHead(response.statusCode, {'Content-Type': mime.lookup(req.url,'text/html')+';charset=utf-8'});
 		res.end(body);
 	});
 }).listen(6617, '127.0.0.1');
-console.log('Github Server running at http://127.0.0.1:6617/');
+console.log('Github Server running at http://127.0.0.1:6617/. Proxying to '+remoteUrl);
