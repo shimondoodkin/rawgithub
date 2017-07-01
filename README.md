@@ -5,7 +5,7 @@ raw github server, edit in github, view in realtime
 
 a node.js proxy to raw.github.com that adds mime, this is your own proxy because rawgithub.com is not realtime.
 
-to run a local wargithub server:
+to run a local rawgithub server:
 
 	git clone https://github.com/shimondoodkin/rawgithub.git
 	enter to the folder rawgithub and run:
