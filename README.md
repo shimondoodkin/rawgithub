@@ -21,3 +21,12 @@ usage:
 	http://localhost:6617/shimondoodkin/rawgithub/master/index.js
 	
 	notice the change from https to http
+
+## Configurable destination
+
+If you have a local/enterprise git repo and want to have the same functionality, you can now pass the URL of that repository via
+an environment variable called GIT_PROXY_DEST. If absent, the proxy will still point to github.
+
+## Docker
+
+There is a dockerfile that turns it into a ready to use container. You can check it out on [dockerhub](https://hub.docker.com/r/kullervo16/rawgithub/)
