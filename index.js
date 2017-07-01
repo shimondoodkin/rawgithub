@@ -15,5 +15,5 @@ http.createServer(function (req, res) {
 	  	res.writeHead(response.statusCode, {'Content-Type': mime.lookup(req.url,'text/html')+';charset=utf-8'});
 		res.end(body);
 	});
-}).listen(6617, '127.0.0.1');
-console.log('Github Server running at http://127.0.0.1:6617/. Proxying to '+remoteUrl);
+}).listen(6617, '0.0.0.0');
+console.log('Github Server running at http://0.0.0.0:6617/. Proxying to '+remoteUrl);
